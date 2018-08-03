@@ -224,7 +224,7 @@ nav {
   padding-left: 14px;
 }
 .features-list__item {
-  width: 220px;
+  width: 218px;
   margin-bottom: 80px;
   /* margin-left: 20px; */
   padding-left: 80px;
@@ -297,6 +297,7 @@ nav {
 }
 .features-list__item:nth-child(6) {
   position: relative;
+  padding-left: 69px;
 }
 .features-list__item:nth-child(6)::before {
   content: "";
@@ -418,6 +419,7 @@ nav {
 .footer .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   box-sizing: border-box;
   padding-left: 16px;
   padding-right: 60px;
@@ -467,9 +469,56 @@ nav {
   width: 80px;
 }
 /* media */
+@media (max-width: 670px) {
+  .features-list__item {
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 620px) {
+  .features-list__item,
+  .features-list__item:nth-child(1),
+  .features-list__item:nth-child(4),
+  .features-list__item:nth-child(6) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .features-list__item::before,
+  .features-list__item:nth-child(1)::before,
+  .features-list__item:nth-child(4)::before,
+  .features-list__item:nth-child(6)::before {
+    display: none;
+  }
+  .submit-form__email {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .box-1 {
+    padding: 0;
+    text-align: center;
+  }
+  .box address {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .box a {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
 @media (max-width: 768px) {
   .container {
     width: auto;
+    padding: 0 20px;
   }
   .header-nav {
     display: none;
@@ -495,11 +544,13 @@ nav {
     height: 16px;
     background-image: url(../img/bars-solid.svg);
   }
+  .slider {
+    margin-bottom: 55px;
+  }
   .slider-col-2 {
     display: none;
   }
   .slider-col-1 {
-    box-sizing: border-box;
     width: auto;
     margin: 0 auto;
     padding-top: 0px;
@@ -507,8 +558,23 @@ nav {
     padding-left: 10px;
     text-align: center;
   }
+  .slider__desc {
+    padding-right: 0;
+  }
+  .features {
+    margin-bottom: 50px;
+  }
+  .features__desc {
+    margin-bottom: 48px;
+  }
   .features-list {
     width: auto;
+  }
+  .features-list__item {
+    margin-bottom: 44px;
+  }
+  .submit {
+    padding-top: 65px;
   }
   .submit-form__btn {
     margin-top: 30px;
@@ -538,9 +604,12 @@ nav {
   }
   .slider-content {
     position: relative;
-    width: 288px;
-    min-height: 382px;
+    width: 284px;
+    min-height: 300px;
     margin-left: 21px;
+  }
+  .features-list {
+    width: auto;
   }
 }
 @media (min-width: 960px) {
